@@ -1,0 +1,43 @@
+{
+  "name": "burns-abstract-logger",
+  "version": "0.0.1",
+  "description": "An abstract logger interface for Burns Engineering projects.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist/**/*"
+  ],
+  "scripts": {
+    "build": "pnpm tsc",
+    "build:watch": "pnpm tsc --watch --preserveWatchOutput",
+    "build:license-disclaimer": "pnpm exec pnpm-licenses generate-disclaimer --prod > ./dist/licenses.txt",
+    "clean": "pnpm rimraf dist && pnpm rimraf tsconfig.tsbuildinfo",
+    "prepack": "pnpm run clean && pnpm run build",
+    "dev": "pnpm run clean && pnpm run build:watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Burns Engineering, Inc.",
+  "license": "proprietary",
+  "packageManager": "pnpm@10.13.1",
+  "devDependencies": {
+    "@quantco/pnpm-licenses": "^2.2.1",
+    "@types/node": "^24.1.0",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.8.3"
+  },
+  "engines": {
+    "node": ">=18.0.0 <24.0.0",
+    "pnpm": ">=10.0.0"
+  },
+  "publishConfig": {
+    "access": "restricted"
+  }
+}
