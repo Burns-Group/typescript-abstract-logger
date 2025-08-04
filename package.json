@@ -1,6 +1,6 @@
 {
   "name": "burns-abstract-logger",
-  "version": "0.0.1",
+  "version": "0.0.1-SNAPSHOT",
   "description": "An abstract logger interface for Burns Engineering projects.",
   "type": "module",
   "main": "./dist/index.js",
